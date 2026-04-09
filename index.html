@@ -1,46 +1,269 @@
 <!DOCTYPE html>
 <html lang="uz">
 <head>
-  <meta charset="UTF-8">
-  <title>Mening Saytim</title>
-  <meta name="description" content="Bu mening birinchi web saytim">
-  <style>
-    body {
-      margin: 0;
-      font-family: sans-serif;
-      background: #111;
-      color: #fff;
-      text-align: center;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bugatti</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+      * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Helvetica', sans-serif;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+}
+
+
+header {
+    position: fixed;
+    width: 100%;
+    padding: 25px 50px;
+    display: flex;
+    justify-content: space-between;
+    z-index: 100;
+}
+
+.logo { font-size: 24px; font-weight: 900; letter-spacing: 4px; }
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+ .hero {
+    height: 100vh;
+   background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6)), url('https://bugatti.imgix.net/67a37f97381526ebc287d6c4/21_lvn_hypergt_headlight-1.jpg');
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+h1 { font-size: 3rem; letter-spacing: 10px; margin-bottom: 15px; }
+
+button {
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+    padding: 12px 30px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover { background: white; color: black; }
+
+ .cars-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 10px;
+}
+
+.car-card {
+    position: relative;
+    height: 450px;
+    overflow: hidden;
+}
+
+.car-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.8s;
+}
+
+.car-card:hover img { transform: scale(1.05); }
+
+.card-info {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+}
+
+ footer {
+    background-color: #050505;
+    padding: 80px 50px 30px;
+    border-top: 1px solid #222;
+}
+
+.footer-top {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-bottom: 50px;
+}
+
+.footer-col h4 {
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    color: #888;
+}
+
+.footer-col ul { list-style: none; }
+
+.footer-col ul li {
+    font-size: 14px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.footer-col ul li:hover { color: #aaa; }
+
+.footer-bottom {
+    border-top: 1px solid #111;
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 11px;
+    color: #555;
+}
+
+.social-links span {
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+ .big-logo-container {
+    width: 100%;
+    overflow: hidden; 
+    background-color: #050505;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 0;
+}
+
+ .giant-text {
+    font-size: 24vw;  
+    font-weight: 5000;
+  
+    color: #111; 
+    letter-spacing: -10px; 
+    line-height: 0.8;
+    margin: 0;
+    pointer-events: none; 
+    text-transform: uppercase;
+    user-select: none;
+}
+
+ @media (max-width: 768px) {
+    .giant-text {
+        font-size: 30vw;
+        letter-spacing: -5px;
     }
-    header {
-      padding: 20px;
-      background: #222;
-    }
-    h1 {
-      color: #00ffcc;
-    }
-    button {
-      padding: 10px 20px;
-      border: none;
-      background: #00ffcc;
-      cursor: pointer;
-      border-radius: 5px;
-    }
-    button:hover {
-      background: #00ccaa;
-    }
-  </style>
+}
+    </style>
 </head>
 <body>
-
 <header>
-  <h1>Salom! Bu mening saytim 🚀</h1>
-</header>
+         <div class="logo">BUGATTI</div> 
+        <nav>
+            <a href="#">MODELS</a>
+            <a href="#">LIFESTYLE</a>
+            <a href="#">SUR MESURE</a>
+        </nav>
+    </header>
 
-<section>
-  <p>Men web dasturchiman 😎</p>
-  <button onclick="alert('Rahmat!')">Bos</button>
-</section>
+    <section class="hero">
+        <div class="content">
+            <h1>THE BUGATTI F.K.P. HOMMAGE</h1>
+            <p>HONORING THE VEYRON AND ITS VISIONARY CREATOR</p>
+            <button>WITNESS THE LEGEND</button>
+        </div>
+    </section> 
 
+    <section class="cars-grid">
+        <div class="car-card">
+            <img src="https://m.atcdn.co.uk/ect/media/%7Bresize%7D/57864129cb734f9b82718a3d5315818d.jpg">
+            <div class="card-info">
+                <h3>TOURBILLON</h3>
+                <span>TIMELESS ELEGANCE</span>
+            </div>
+        </div>
+        <div class="car-card">
+            <img src="https://s.yimg.com/ny/api/res/1.2/KUWrwmBAbHSppYNZgC6y9Q--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyNDI7aD03ODk-/https://media.zenfs.com/en/motorious_297/80392e10c682a773b722a7a5cf5fdfa9 " alt="Mistral">
+            <div class="card-info">
+                <h3>MISTRAL</h3>
+                <span>LEGENDARY WIND</span>
+            </div>
+        </div>
+        <div class="car-card">
+            <img src="https://www.carscoops.com/wp-content/uploads/2023/06/Bugatti-Bolide-High-Speed-Testing-1s.jpg  ">
+            <div class="card-info">
+                <h3>BOLIDE</h3>
+                <span>TRACK ONLY</span>
+            </div>
+        </div>
+        <div class="car-card">
+            <img src=" https://cimg0.ibsrv.net/ibimg/hgm/1920x1080-1/100/755/first-bugatti-divo-in-united-states--photo-credit-miller-motorcars_100755916.jpg">
+            <div class="card-info">
+                <h3>DIVO</h3>
+                <span>BUILT FOR CORNERS</span>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-top">
+            <div class="footer-col">
+                <h4>HYPER SPORTS CARS</h4>
+                <ul>
+                    <li>Tourbillon</li>
+                    <li>W16 Mistral</li>
+                    <li>Bolide</li>
+                    <li>Chiron</li>
+                    <li>Divo</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>LA MARQUE</h4>
+                <ul>
+                    <li>Discover Bugatti</li>
+                    <li>History</li>
+                    <li>Careers</li>
+                    <li>Media</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>LIFESTYLE</h4>
+                <ul>
+                    <li>Art of Living</li>
+                    <li>Watches</li>
+                    <li>Boutique</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>CONTACT</h4>
+                <ul>
+                    <li>Service Center</li>
+                    <li>Dealer Finder</li>
+                    <li>Contact Us</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="social-links">
+                <span>FB</span> <span>IG</span> <span>YT</span> <span>LI</span>
+            </div>
+            <p>© 2026 BUGATTI AUTOMOBILES S.A.S.</p>
+        </div>
+    </footer>
+    <div class="big-logo-container">
+    <h1 class="giant-text">BUGATTI</h1>
+</div>
+   
 </body>
 </html>
